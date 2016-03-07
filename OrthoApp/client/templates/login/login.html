@@ -1,0 +1,20 @@
+<template name="login">
+    {{#if currentUser}}
+    <div class="navbar-right">
+        <a href="/{{currentUser._id}}">
+            <span id="ownProfGlyph" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </a>
+        <button class="btn btn-default customFBLog" id="logout-button">Logout</button>
+    </div>
+    {{else}}
+    <form class="navbar-form navbar-right" id="login-form">
+        <div class="form-group">
+            <input type="text" class="form-control" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Log In</button>
+    </form>
+    {{/if}}
+</template>
