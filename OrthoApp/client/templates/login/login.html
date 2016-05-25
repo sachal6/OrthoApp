@@ -1,20 +1,41 @@
 <template name="login">
-    {{#if currentUser}}
-    <div class="navbar-right">
-        <a href="/{{currentUser._id}}">
-            <span id="ownProfGlyph" class="glyphicon glyphicon-user" aria-hidden="true"></span>
-        </a>
-        <button class="btn btn-default customFBLog" id="logout-button">Logout</button>
+    <ul id="dropdown1" class="dropdown-content">
+        <li>
+            <form class="col s12" id="login-form">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="text" class="form-control">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Password" id="password" type="password" class="form-control">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn waves-effect waves-light" name="login">
+                    <i class="material-icons right">Login</i>
+                </button>
+            </form>
+        </li>
+    </ul>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo left">Digit Medical</a>
+        <div class="right">
+            <ul class="right hide-on-med-and-down">
+                {{#if currentUser}}
+                <li>
+                    <a href="/{{currentUser._id}}">
+                        <span id="ownProfGlyph" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                    <button class="btn waves-effect waves-light" id="logout-button">Logout</button>
+                </li>
+                {{else}}
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Doctor Login<i class="material-icons right"></i></a></li>
+                {{/if}}
+            </ul>
+        </div>
     </div>
-    {{else}}
-    <form class="navbar-form navbar-right" id="login-form">
-        <div class="form-group">
-            <input type="text" class="form-control" name="email" placeholder="Email">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-default">Log In</button>
-    </form>
-    {{/if}}
 </template>

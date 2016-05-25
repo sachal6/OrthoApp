@@ -2,9 +2,16 @@ exposed = FlowRouter.group({
 });
 exposed.route( '/', {
   action: function() {
-    BlazeLayout.render( 'layout', { main: 'landing' } ); 
+    BlazeLayout.render( 'layout', { navbar: 'login', main: 'landing' } ); 
   },
-  name: 'landing' // Optional route name.
+  name: 'landing'
+});
+
+exposed.route( '/survey/:_id', {
+  action: function() {
+    BlazeLayout.render( 'layout', { navbar: 'login', main: 'survey', questionArea: 'surveywelcome' } ); 
+  },
+  name: 'survey'
 });
 
 
@@ -14,7 +21,7 @@ protected = FlowRouter.group({
 
 protected.route( '/dashboard/:_id', {   
   action: function() {
-    BlazeLayout.render( 'layout', { main: 'dashboard' } ); 
+    BlazeLayout.render( 'layout', { navbar: 'login', main: 'dashboard' } ); 
   },
     name: 'dashboard'
 });

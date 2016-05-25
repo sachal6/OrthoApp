@@ -21,7 +21,8 @@ insecure                # Allow all DB writes from clients (for prototyping)
 kadira:flow-router
 alanning:roles
 kadira:blaze-layout
-twbs:bootstrap
 msavin:mongol
 accounts-password
 chrismbeckett:toastr
+materialize:materialize
+aldeed:simple-schema

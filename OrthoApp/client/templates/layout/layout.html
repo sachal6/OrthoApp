@@ -1,15 +1,15 @@
 <template name="layout">
-	<body>
-  <div class="container">
-    <header class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Digit Medical</a>
-      </div>
-        {{> login}}
+    <header>
+        <nav>
+            {{>Template.dynamic template=navbar}}
+        </nav>
     </header>
-    <main>
-        {{>Template.dynamic template=main}}
-    </main>
-  </div>
-</body>
+    <body>
+        <main id="main">
+            {{>Template.dynamic template=main}}
+        </main>
+    </body>
+    <footer class="page-footer">
+        {{>footer}}
+    </footer>
 </template>

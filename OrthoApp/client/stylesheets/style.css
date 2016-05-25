@@ -1,4 +1,51 @@
-/* CSS declarations go here */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-   padding-top: 50px;
+    margin: 0 0 100px;
+    /* bottom = footer height */
+    height: 500px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#survey-content {
+    height: 100%;
+}
+
+#survey-container {
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+}
+
+#__blaze-root {
+    height: 100%;
+}
+
+.center-align {
+    width: 100%;
+}
+
+#welcomeli {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+#welcomeDetailli {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    
 }
