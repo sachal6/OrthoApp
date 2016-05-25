@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!-- Before use, remove script and heading. Locations are marked below -->
+<head>
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="progressBar.js"></script>
+    <link rel="stylesheet" href="progressBar.css">
+    <!-- For demonstration purposes. Remove following script before use -->
+    <script>
+        $(document).ready(function() {
+            progressToStep(2);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="progressBar">
+      <!-- Remove following heading before use -->
+      <h4 style="color:#26a69a; padding-top:2%;">Progress Bar Demo</h4>
+        <div>
+            <div class="progressBox"> </div>
+            <div class="progressBox"> </div>
+            <div class="progressBox"> </div>
+            <div class="progressBox"> </div>
+            <div class="progressBox"> </div>
+            <div class="progressBox"> </div>
+            <div class="progressBox"> </div>
+        </div>
+        <div>
+            <div class="progressLabel">
+                <p>Get Started</p>
+            </div>
+            <div class="progressLabel">
+                <p>Let's Record</p>
+            </div>
+            <div class="progressLabel">
+                <p>Customize the Lookback UI</p>
+            </div>
+            <div class="progressLabel">
+                <p>Exclude Things</p>
+            </div>
+            <div class="progressLabel">
+                <p>Add User Info</p>
+            </div>
+            <div class="progressLabel">
+                <p>Customize the Timeline</p>
+            </div>
+            <div class="progressLabel">
+                <p>Upgrade Lookback</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
